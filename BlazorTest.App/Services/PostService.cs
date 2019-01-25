@@ -11,7 +11,8 @@ namespace BlazorTest.App.Services
     {
         private readonly HttpClient _httpClient = new HttpClient();
         private readonly string requestUrl = "https://jsonplaceholder.typicode.com/posts";
-        //private Uri uri = new Uri("https://jsonplaceholder.typicode.com/posts");
+        //
+        private Uri uri = new Uri("https://jsonplaceholder.typicode.com/posts");
         //public readonly ApiClient apiClient = new ApiClient(new Uri("https://jsonplaceholder.typicode.com/posts"));
 
         public async Task<Post[]> GetPostsAsync()
