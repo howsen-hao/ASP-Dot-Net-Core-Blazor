@@ -1,0 +1,30 @@
+﻿@using BlazorTest.App.Services
+@page "/posts"
+@inject WeatherForecastService ForecastService
+<h1>Post List</h1>
+
+<p>This component demonstrates fetching data from the API.</p>
+@if (postlist == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <div>
+        Total: @posts.Count().ToString()
+    </div>
+}
+
+@functions {
+    string postlist = "";
+    Post[] posts;
+
+    protected override async Task OnInitAsync()
+    {
+        postlist = "";
+
+        //postlist = await ForecastService.GetPostAsync();
+        posts = await ForecastService.GetPostObjAsync();
+    }
+}
+

@@ -1,0 +1,7 @@
+.vs/
+.sonarqube/
+BlazorTest.App/bin/
+BlazorTest.App/obj/
+BlazorTest.Server/bin/
+BlazorTest.Server/obj/
+BlazorTest.Server/Properties/PublishProfiles/
