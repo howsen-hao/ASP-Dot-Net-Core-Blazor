@@ -25,5 +25,7 @@ namespace BlazorTest.App.Services
             return await Task.FromResult(JsonConvert.DeserializeObject<Post[]>(data));
         }
 
+        //Comments
+
     }
 }
