@@ -1,6 +1,6 @@
 ﻿@using BlazorTest.App.Services
 @page "/postlist"
-@inject WeatherForecastService ForecastService
+@inject PostListService postlistService
 <h1>Post List</h1>
 
 <p>This component demonstrates fetching data from the API.</p>
@@ -41,7 +41,7 @@ else
 
     private async Task RefreshPostList()
     {
-        Posts = await ForecastService.GetPostObjList();
+        Posts = await postlistService.GetPostObjList();
         StateHasChanged();
     }
 }

@@ -11,6 +11,7 @@ namespace BlazorTest.App
             // Since Blazor is running on the server, we can use an application service
             // to read the forecast data.
             services.AddSingleton<WeatherForecastService>();
+            services.AddSingleton<PostListService>();
         }
 
         public void Configure(IBlazorApplicationBuilder app)
