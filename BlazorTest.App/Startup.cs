@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Blazor.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using BlazorTest.App.Services;
+using System.Net.Http;
 
 namespace BlazorTest.App
 {
@@ -12,6 +13,7 @@ namespace BlazorTest.App
             // to read the forecast data.
             services.AddSingleton<WeatherForecastService>();
             services.AddSingleton<PostListService>();
+            services.AddSingleton<HttpClient>();
         }
 
         public void Configure(IBlazorApplicationBuilder app)
