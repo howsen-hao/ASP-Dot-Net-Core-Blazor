@@ -16,15 +16,14 @@ else
 }
 
 @functions {
-    string postlist = "";
-    Post[] posts;
+string postlist = "";
+Post[] posts;
 
-    protected override async Task OnInitAsync()
-    {
-        postlist = "";
+protected override async Task OnInitAsync()
+{
+    postlist = "";
 
-        //postlist = await ForecastService.GetPostAsync();
-        posts = await ForecastService.GetPostObjAsync();
-    }
+    //postlist = await ForecastService.GetPostAsync();
+    posts = await ForecastService.GetPostObjAsync();
 }
-
+}
