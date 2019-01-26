@@ -23,31 +23,31 @@ namespace BlazorTest.App.Services
                 Summary = Summaries[rng.Next(Summaries.Length)]
             }).ToArray());
         }
-        public Task<string> GetPostAsync()
-        {
-            HttpClient _httpClient = new HttpClient();
-            string requestUrl = "https://jsonplaceholder.typicode.com/posts";
+        //public Task<string> GetPostAsync()
+        //{
+        //    HttpClient _httpClient = new HttpClient();
+        //    string requestUrl = "https://jsonplaceholder.typicode.com/posts";
 
-            _httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
-            //_httpClient.DefaultRequestHeaders.Add("token", "jwttoken");
+        //    _httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
+        //    //_httpClient.DefaultRequestHeaders.Add("token", "jwttoken");
 
-            var response = _httpClient.GetAsync(requestUrl, HttpCompletionOption.ResponseHeadersRead);
-            response.Result.EnsureSuccessStatusCode();
-            var data = response.Result.Content.ReadAsStringAsync();
-            return data;
-        }
-        public Task<Post[]> GetPostObjAsync()
-        {
-            HttpClient _httpClient = new HttpClient();
-            string requestUrl = "https://jsonplaceholder.typicode.com/posts";
+        //    var response = _httpClient.GetAsync(requestUrl, HttpCompletionOption.ResponseHeadersRead);
+        //    response.Result.EnsureSuccessStatusCode();
+        //    var data = response.Result.Content.ReadAsStringAsync();
+        //    return data;
+        //}
+        //public Task<Post[]> GetPostObjAsync()
+        //{
+        //    HttpClient _httpClient = new HttpClient();
+        //    string requestUrl = "https://jsonplaceholder.typicode.com/posts";
 
-            _httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
-            //_httpClient.DefaultRequestHeaders.Add("token", "jwttoken");
+        //    _httpClient.DefaultRequestHeaders.Add("Accept", "application/json");
+        //    //_httpClient.DefaultRequestHeaders.Add("token", "jwttoken");
 
-            var response = _httpClient.GetAsync(requestUrl, HttpCompletionOption.ResponseHeadersRead);
-            response.Result.EnsureSuccessStatusCode();
-            var data = response.Result.Content.ReadAsStringAsync();
-            return Task.FromResult(JsonConvert.DeserializeObject<Post[]>(data.ToString()));
-        }
+        //    var response = _httpClient.GetAsync(requestUrl, HttpCompletionOption.ResponseHeadersRead);
+        //    response.Result.EnsureSuccessStatusCode();
+        //    var data = response.Result.Content.ReadAsStringAsync();
+        //    return Task.FromResult(JsonConvert.DeserializeObject<Post[]>(data.ToString()));
+        //}
     }
 }
